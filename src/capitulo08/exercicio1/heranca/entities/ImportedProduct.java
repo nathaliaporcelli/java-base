@@ -1,4 +1,4 @@
-package heranca.entities;
+package capitulo08.exercicio1.heranca.entities;
 
 public class ImportedProduct extends Product{
     private Double customsFee;

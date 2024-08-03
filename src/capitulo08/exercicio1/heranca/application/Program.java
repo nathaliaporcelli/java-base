@@ -1,8 +1,8 @@
-package heranca.application;
+package capitulo08.exercicio1.heranca.application;
 
-import heranca.entities.ImportedProduct;
-import heranca.entities.Product;
-import heranca.entities.UsedProduct;
+import capitulo08.exercicio1.heranca.entities.ImportedProduct;
+import capitulo08.exercicio1.heranca.entities.Product;
+import capitulo08.exercicio1.heranca.entities.UsedProduct;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
