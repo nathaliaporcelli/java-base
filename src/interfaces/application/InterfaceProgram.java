@@ -11,7 +11,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class InterfaceProgram {
-    public static void main (String []args){
+    public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
@@ -20,21 +20,21 @@ public class InterfaceProgram {
         System.out.print("Modelo do carro: ");
         String carModel = sc.nextLine();
         System.out.print("Retirada (dd/MM/yyyy hh:mm) ");
-        LocalDateTime start = LocalDateTime.parse(sc.nextLine(),fmt);
+        LocalDateTime start = LocalDateTime.parse(sc.nextLine(), fmt);
         System.out.print("Retorno (dd/MM/yyyy hh:mm) ");
-        LocalDateTime finish = LocalDateTime.parse(sc.nextLine(),fmt);
+        LocalDateTime finish = LocalDateTime.parse(sc.nextLine(), fmt);
 
-        CarRental cr = new CarRental(start,finish, new Vehicle(carModel));
+        CarRental cr = new CarRental(start, finish, new Vehicle(carModel));
 
         BrazilTaxService taxService = new BrazilTaxService();
 
         System.out.println("Entre com o preço por hora: ");
-        double pricePerHour=sc.nextDouble();
+        double pricePerHour = sc.nextDouble();
 
         System.out.println("Entre com o preço por dia: ");
-        double pricePerDay=sc.nextDouble();
+        double pricePerDay = sc.nextDouble();
 
-        RentalService rentalService = new RentalService(pricePerDay,pricePerHour,new BrazilTaxService());
+        RentalService rentalService = new RentalService(pricePerDay, pricePerHour, new BrazilTaxService());
 
         rentalService.processInvoice(cr);
 
